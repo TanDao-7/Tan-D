@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width= device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/account.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<title>Account</title>
+</head>
+<body>
+<div class="header">
+<div class="container">
+<div class="navbar">
+	<div class="logo">
+	<img src="image/logo.png" width="125" alt="logo">
+	</div>
+	<nav>
+		<ul id="menuitems">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="product.html">Product</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="">Account</a></li>
+		</ul>
+			<img src="image/cart.png" width="30" height="30" alt="cart" class="cart">
+			<img src="image/menu-icon-2.png" alt="menu" class="menu-icon" onclick="menutoggle()">
+	</nav>
+</div>
+</div>
+</div>
+<div id="container">
+<div class="small_container">
+<div class="form-box">
+	<form action="#" class="login_form">
+	<h2>Login</h2>
+	<div class="input-box">
+		<input type="text" required>
+		<label>Username</label>
+		<i class="fa-solid fa-user"></i>
+	</div>
+	<div class="input-box">
+		<input type="password" required>
+		<label>Password</label>
+		<i class="fa-solid fa-lock"></i>
+	</div>
+	<div class="forget_section">
+		<p style="color:#FFFFFF"><input type="checkbox"> Remember me</p>
+		<a href="#"> Forgot password?</a>
+	</div>
+		<button class="btn">Sign In</button>
+	<div class="account_creation">
+		<span>Don't have an account? <a href="#" class="register_link">Register</a></span>
+	</div>
+	</form>
+	<form action="#" class="register_form">
+	<h2>Register</h2>
+	<div class="input-box">
+		<input type="text" required>
+		<label>Username</label>
+		<i class="fa-solid fa-user"></i>
+	</div>
+	<div class="input-box">
+		<input type="password" required>
+		<label>Password</label>
+		<i class="fa-solid fa-lock"></i>
+	</div>
+	<div class="input-box">
+		<input type="password" required>
+		<label>Password Confirm</label>
+		<i class="fa-solid fa-circle-check"></i>
+	</div>
+		<button class="btn">Sign Up</button>
+	<div class="account_creation">
+		<span>Already have an account? <a href="#" class="login_link">Login</a></span>
+	</div>
+	</form>
+</div>	
+</div>
+</div>
+<div class="footer">
+	<div class="container">
+	<div class="row">
+		<div class="footer-col-1">
+			<h3>Download Our App</h3>
+			<p>Download App for Android and IOS mobile phone.</p>
+		<div class="app-logo">
+			<img src="image/google-store-logo.png" alt="logo">
+			<img src="image/app-store-logo.png" alt="logo">	
+		</div>
+		</div>
+		<div class="footer-col-2">
+			<img src="image/msi-app.png" alt="application">
+		</div>	
+		<div class="footer-col-3">
+			<h3>Useful Link</h3>
+			<ul>
+				<li>Coupons</li>
+				<li>Contact Me</li>
+				<li>Term of Service</li>
+				<li>Refund Policy</li>
+			</ul>
+		</div>
+		<div class="footer-col-4">
+			<h3>Follow Us</h3>
+			<ul>
+				<li>Facebook</li>
+				<li>Instagram</li>
+				<li>TikTok</li>
+				<li>X</li>
+			</ul>
+		</div>
+		<p class="copyright">Please contact me through this email <a href="mailto:alexdaotan@gmail.com">alexdaotan@gmail.com</a> if you have any question</p>
+	</div>
+	</div>
+</div>
+<script>
+	var menuitems = document.getElementById("menuitems");
+	menuitems.style.maxHeight="0px";
+	function menutoggle(){
+		if(menuitems.style.maxHeight=="0px")
+			{
+			menuitems.style.maxHeight="300px";
+			}
+		else {
+			menuitems.style.maxHeight="0px";
+		}
+	}
+	const login_form = document.querySelector('.login_form');
+	const register_form = document.querySelector('.register_form');
+	const register_link = document.querySelector('.register_link');
+	const login_link = document.querySelector('.login_link');
+	register_link.onclick=()=> {
+		register_form.classList.add('active');
+		login_form.classList.add('active');
+	}
+	login_link.onclick=()=> {
+		register_form.classList.remove('active');
+		login_form.classList.remove('active');
+	}
+</script>
+</body>
+</html>
